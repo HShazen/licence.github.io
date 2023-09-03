@@ -60,6 +60,22 @@
     </footer>
 
 </div>
+<script>
+        var accordioning = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < accordioning.length; i++) {
+        accordioning[i].addEventListener("click", function(){
+            this.classList.toggle("active");
+            this.parentElement.classList.toggle("active");
 
+        var pannel = this.nextElementSibling;
+        if (pannel.style.maxHeight) {
+            pannel.style.maxHeight = null;
+        } else {
+            pannel.style.maxHeight = pannel.scrollHeight + "px";
+        }
+        })
+    }
+</script>
 </body>
 </html>
