@@ -2,17 +2,21 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="refresh" content="2000">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="pic/alger1logo.png">
     <link rel="stylesheet" href="sty.css">
-    <title> Licence En Informatique </title>
+
+    <title> Licence En Informatique </title> 
+       <script src="scr.js"></script>
 </head>
 
 <body>
     <header>
-        <img src="pictures/alger1logo.png">
+        <img height="70px" width="70px" src="pic/alger1logo.png">
         <a href="" class="logo"></a>
         <nav class="navigation"> 
             <a href="#home">Home</a>
@@ -24,146 +28,25 @@
 
     <section class="main">
         <div>
-            <h2> Bienvenue sur la plateforme éducative de HShazen! </h2>
+            <h2> Bienvenue sur la plateforme éducative de HShazen!</h2>
             <table>
                 <h3>Vous Trouvez ici tous les examens, tests et cours dont vous avez besoin pour réussir vos études. Rejoignez-nous dans la quête de l'excellence académique.</h3>
             </table>
     </section>
 
-    <section class="cards" id="services">
-        <h2 class="title_cards">Services</h2>
-        <div class="content">
-            <!--***********************-->
-            <div class="card">
-                <div class="icon_Ser">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="info">
-                    <h3>***********</h3>
-                    <p>----------------- -------------- -------------- -------- ------- ------- ----------------- -------------- -------------- -------- ------- -------</p>
-                </div>
-            </div>
-            <!--************************-->
-            <div class="card">
-                <div class="icon_Ser">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="info">
-                    <h3>***********</h3>
-                    <p>----------------- -------------- -------------- -------- ------- ------------------------ -------------- -------------- -------- ------- -------</p>
-                </div>
+    <section class="licence" id="licence">
+        <h2 class="title_licence">LICENCE</h2>
+        <div class="L">
+            <button class="accordion" onclick="fun()">
+                <span class="text">Licence 1
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+            </button>
+            <div class="pannel">
+                <p>this is our text so please finish this project nowrap</p>
             </div>
         </div>
-    </section>
 
-    <section class="project" id="project">
-        <h2 class="title_cards">Projects</h2>
-        <div class="content">
-            <!--*******************************-->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="pic/Picture1.png">
-                </div>
-                <div class="project-info">
-                    <p class="category">-------------------</p>
-                    <strong class="project-title">
-                        <span>**************</span>
-                        <a href="#" class="more">more details</a>
-                    </strong>
-                </div>
-            </div>
-            <!--*******************************-->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="pic/Picture1.png">
-                </div>
-                <div class="project-info">
-                    <p class="category">-------------------</p>
-                    <strong class="project-title">
-                        <span>**************</span>
-                        <a href="#" class="more">more details</a>
-                    </strong>
-                </div>
-            </div>
-            <!--*******************************-->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="pic/Picture1.png">
-                </div>
-                <div class="project-info">
-                    <p class="category">-------------------</p>
-                    <strong class="project-title">
-                        <span>**************</span>
-                        <a href="#" class="more">more details</a>
-                    </strong>
-                </div>
-            </div>
-            <!--*******************************-->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="pic/Picture1.png">
-                </div>
-                <div class="project-info">
-                    <p class="category">-------------------</p>
-                    <strong class="project-title">
-                        <span>**************</span>
-                        <a href="#" class="more">more details</a>
-                    </strong>
-                </div>
-            </div>
-            <!--*******************************-->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="pic/Picture1.png">
-                </div>
-                <div class="project-info">
-                    <p class="category">-------------------</p>
-                    <strong class="project-title">
-                        <span>**************</span>
-                        <a href="#" class="more">more details</a>
-                    </strong>
-                </div>
-            </div>
-            <!--*******************************-->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="pic/Picture1.png">
-                </div>
-                <div class="project-info">
-                    <p class="category">-------------------</p>
-                    <strong class="project-title">
-                        <span>**************</span>
-                        <a href="#" class="more">more details</a>
-                    </strong>
-                </div>
-            </div>
-        </div>    
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 class="title_cards">Contact</h2>
-        <div class="content">
-            <!--***********************-->
-            <div class="card">
-                <div class="icon_Ser">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>0549968745</p>
-                </div>
-            </div>
-            <!--************************-->
-            <div class="card">
-                <div class="icon_Ser">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <p>forstady333@gmail.com</p>
-                </div>
-            </div>
-        </div>
     </section>
 
     <footer class="footer">
@@ -177,5 +60,6 @@
     </footer>
 
 </div>
+
 </body>
 </html>
