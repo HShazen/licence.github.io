@@ -37,13 +37,33 @@
     <section class="licence" id="licence">
         <h2 class="title_licence">LICENCE</h2>
         <div class="L">
-            <button class="accordion" onclick="fun()">
-                <span class="text">Licence 1
+            <button class="accordion">
+                <span class="b" id="1">Licence 1
                     <i class="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
             <div class="pannel">
                 <p>this is our text so please finish this project nowrap</p>
+            </div>
+        </div>
+        <div class="L">
+            <button class="accordion">
+                <span class="b">Licence 2
+                    <i class="fa-solid fa-chevron-down" class="upDown"></i>
+                </span>
+            </button>
+            <div class="pannel">
+                <p>this is our text so please finish this project nowrap</p>
+            </div>
+        </div>
+        <div class="L">
+            <button class="accordion" >
+                <span class="b">Licence 3
+                    <i class="fa-solid fa-chevron-down" class = "upDown"></i>
+                </span>
+            </button>
+            <div class="pannel">
+                <p>this is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrap</p>
             </div>
         </div>
 
@@ -61,21 +81,39 @@
 
 </div>
 <script>
-        var accordioning = document.getElementsByClassName("accordion");
+    var accordioning = document.getElementsByClassName("accordion");
     var i;
+
     for (i = 0; i < accordioning.length; i++) {
+        (function(index) {
         accordioning[i].addEventListener("click", function(){
             this.classList.toggle("active");
             this.parentElement.classList.toggle("active");
-
-        var pannel = this.nextElementSibling;
+            var pannel = this.nextElementSibling;        
+            var elements = document.getElementsByClassName("b");    
+            var upDown = document.getElementsByClassName("fa-solid"); 
         if (pannel.style.maxHeight) {
             pannel.style.maxHeight = null;
-        } else {
-            pannel.style.maxHeight = pannel.scrollHeight + "px";
+            elements[index].style.borderRadius= "8px";
+            upDown[index].classList.remove("fa-chevron-up");
+            upDown[index].classList.add("fa-chevron-down");
+        } else {            
+            pannel.style.maxHeight = pannel.scrollHeight + "px"; 
+            elements[index].style.borderRadius= "8px 8px 0px 0px";
+            upDown[index].classList.remove("fa-chevron-down");
+            upDown[index].classList.add("fa-chevron-up");
         }
         })
+        })(i);
     }
+    function fun() {
+        
+}
+function toggleIcon() {
+    icon= document.getElementsById("1");
+    icon.classList.add("fa-chevron-up");
+}
+
 </script>
 </body>
 </html>
