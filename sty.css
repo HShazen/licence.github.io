@@ -102,12 +102,6 @@ section {
     color:rgba(200, 200, 200, 0.797);
 }
 .L {
-    /*background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-    padding: 0px; /* Add padding to the container */
-   /* border-radius: 8px; /* Optional: Add border radius */
-   /* border-top: none;
-    margin: 10px 0;
-    height: 10vh;*/
     background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     padding: 0px; /* Add padding to the container */
     border-radius: 8px; /* Optional: Add border radius */
@@ -138,11 +132,11 @@ section {
     align-items: center;
   }
   
-  .accordion:hover {
+.accordion:hover {
     outline: 0;
   }
   
-  .accordion span{
+.accordion span{
     background-color: rgb(5, 6, 45);
     padding: 16px 24px;
     border-radius: 6px;
@@ -152,19 +146,18 @@ section {
     display: flex;
     justify-content: space-between;
   }
-  
-  .accordion:hover span {
+
+.accordion:hover span {
     background: none;
   }
 .pannel {
     overflow: hidden;
     padding: 0px 3px;
     max-height: 0px;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.6s ease-in-out;
 }
 .active .pannel {
     padding: 0px 3px 3px 3px;
-    margin-bottom: 10rem;
 }
 .pannel p {
     margin: 0;
