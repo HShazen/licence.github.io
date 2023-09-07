@@ -39,14 +39,14 @@ header{
 }
 
 section {
-    padding: 100px;
+    padding: 10px;
 }
 
 .main {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(pic/hacker.jpg) no-repeat;
+    background: url(pic/hacker.png) no-repeat;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -106,11 +106,11 @@ section {
     padding: 0px; /* Add padding to the container */
     border-radius: 8px; /* Optional: Add border radius */
     border-top: none;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .accordion {
-    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    background: none;
     border: 0;
     border-radius: 8px;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -144,7 +144,7 @@ section {
     height: 100%;
     transition: 300ms;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*to make licence at the right and > at the left*/
   }
 
 .accordion:hover span {
@@ -154,20 +154,81 @@ section {
     overflow: hidden;
     padding: 0px 3px;
     max-height: 0px;
-    transition: max-height 1.6s ease-in-out;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    transition: max-height 0.6s ease-in-out;
+    border-radius: 0px 0px 8px 8px;
+    height: 100%;
 }
 .active .pannel {
     padding: 0px 3px 3px 3px;
 }
-.pannel p {
-    margin: 0;
-    background-color:  rgb(5, 6, 45);
+.tab {
+    border-radius: 0px 0px 8px 8px;
+    background-color: rgb(5, 6, 45);
+    overflow: hidden;
+    justify-content: space-between;
+    display: flex;
+    padding: 0px 3px;
+    font-size: 16px;
+    transition: max-height 0.6s ease-in-out;
+}
+
+.tab1 {
+    margin: 1rem;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     color: rgb(255, 255, 255);
-    font-size:1.2rem;
+    font-size: 16px;
+    line-height: 1.4em;
+    padding: 0px;
+    width: 50%;
+    border-radius: 8px;
+    display: inline-block;
+}
+.tab2 {
+    margin: 1rem;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 1.4em;
+    padding: 0px;
+    border-radius: 8px;
+    width: 50%;
+    display: inline-block;
+}
+.tab-head {
+    margin: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0.5rem ;
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+    background: rgb(5, 6, 45);
+}
+.tab-li {
+    margin: 2px;
     padding: 1rem 1rem 1rem 2rem;
     border-radius: 0px 0px 8px 8px;
-    line-height: 1.4em;
-    border-top: none;
+    background: rgb(5, 6, 45);
+}
+.tab-li ul {
+    margin: 0;
+    padding: 0;
+}
+
+.tab-li li {
+    margin: 0.75em;
+}
+.b h3 {
+    font-size: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration-line: underline;
 }
 /*
 .button-64 {
@@ -351,7 +412,27 @@ footer .icons a{
     font-size: 1.3em;
     padding: 10px;
 }
-
+@media (max-width: 700px) {
+    .tab{
+        flex-direction: column;
+    }
+    .tab1, .tab2{
+        width: 95%;
+        margin: 2.5%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 410px) {
+    .accordion h3 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 300px) {
+    .accordion h3 {
+        font-size: 12px;
+    }
+}
 @media (max-width: 1023px) {
     header{
         padding: 10px 20px;
