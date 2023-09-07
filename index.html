@@ -1,119 +1,489 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-<head>
-    <meta http-equiv="refresh" content="2000">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="icon" type="image/png" sizes="12x12" href="pic/alger1logo.png">
-    <link rel="stylesheet" href="sty.css">
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
-    <title> Licence En Informatique </title> 
-       <script src="scr.js"></script>
-</head>
+header{
+    background-color:rgba(228, 227, 227, 0.753);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
 
-<body>
-    <header>
-        <img height="70px" width="70px" src="pic/alger1logo.png">
-        <a href="" class="logo"></a>
-        <nav class="navigation"> 
-            <a href="#home">Home</a>
-            <a href="#licence">Licence</a>
-            <a href="#master">Master</a>
-            <a href="#contrubution">Contrubution</a>
-        </nav>
-    </header>
+.logo{
+    text-decoration: none;
+    color: #000d6dde;
+    font-weight: 700;
+    font-size: 1.8em;
+}
 
-    <section class="main">
-        <div>
-            <h2> Bienvenue sur la plateforme éducative de HShazen!</h2>
-            <table>
-                <h3>Vous Trouvez ici tous les examens, tests et cours dont vous avez besoin pour réussir vos études. Rejoignez-nous dans la quête de l'excellence académique.</h3>
-            </table>
-    </section>
+.navigation a {
+    text-decoration: none;
+    color: #0b30c3de;
+    font-size: 1.2em;
+    font-weight: 499;
+    padding-left: 25px;
+}
 
-    <section class="licence" id="licence">
-        <h2 class="title_licence">LICENCE</h2>
-        <div class="L">
-            <button class="accordion">
-                <span class="b" id="1">Licence 1
-                    <i class="fa-solid fa-chevron-down"></i>
-                </span>
-            </button>
-            <div class="pannel">
-                <p>this is our text so please finish this project nowrap</p>
-            </div>
-        </div>
-        <div class="L">
-            <button class="accordion">
-                <span class="b">Licence 2
-                    <i class="fa-solid fa-chevron-down" class="upDown"></i>
-                </span>
-            </button>
-            <div class="pannel">
-                <p>this is our text so please finish this project nowrap</p>
-            </div>
-        </div>
-        <div class="L">
-            <button class="accordion" >
-                <span class="b">Licence 3
-                    <i class="fa-solid fa-chevron-down" class = "upDown"></i>
-                </span>
-            </button>
-            <div class="pannel">
-                <p>this is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrapthis is our text so please finish this project nowrap</p>
-            </div>
-        </div>
+.navigation a:hover {
+    color:rgb(55, 111, 194)
+}
 
-    </section>
+section {
+    padding: 10px;
+}
 
-    <footer class="footer">
-        <p>Copyrights @ <span>HShazen</span></p>
-        <div class="icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-discord"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-        </div>
-    </footer>
+.main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(pic/hacker.png) no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-</div>
-<script>
-    var accordioning = document.getElementsByClassName("accordion");
-    var i;
+.main h2 {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
 
-    for (i = 0; i < accordioning.length; i++) {
-        (function(index) {
-        accordioning[i].addEventListener("click", function(){
-            this.classList.toggle("active");
-            this.parentElement.classList.toggle("active");
-            var pannel = this.nextElementSibling;        
-            var elements = document.getElementsByClassName("b");    
-            var upDown = document.getElementsByClassName("fa-solid"); 
-        if (pannel.style.maxHeight) {
-            pannel.style.maxHeight = null;
-            elements[index].style.borderRadius= "8px";
-            upDown[index].classList.remove("fa-chevron-up");
-            upDown[index].classList.add("fa-chevron-down");
-        } else {            
-            pannel.style.maxHeight = pannel.scrollHeight + "px"; 
-            elements[index].style.borderRadius= "8px 8px 0px 0px";
-            upDown[index].classList.remove("fa-chevron-down");
-            upDown[index].classList.add("fa-chevron-up");
-        }
-        })
-        })(i);
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6d88ffde;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.myButton {
+    color: #fff;
+    background-color: rgb(1, 205, 137);
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1em 3em;
+    font-weight: 600;
+    margin: 2em 0em;
+    display: inline-block;
+    border-radius: 15px;
+    transition: 0.5s ease;
+}
+
+.myButton:hover {
+    background-color:rgb(0, 169, 113);
+    transform : scale(1.1);
+}
+
+.icons a{
+    color: #fff;
+    padding-right: 1em;
+    font-size: 1.7em;
+}
+
+.icons a:hover {
+    color:rgba(200, 200, 200, 0.797);
+}
+.L {
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    padding: 0px; /* Add padding to the container */
+    border-radius: 8px; /* Optional: Add border radius */
+    border-top: none;
+    margin: 10px;
+}
+
+.accordion {
+    background: none;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    line-height: 1em;
+    width: 100%;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+.accordion:hover {
+    outline: 0;
+  }
+  
+.accordion span{
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+    display: flex;
+    justify-content: space-between; /*to make licence at the right and > at the left*/
+  }
+
+.accordion:hover span {
+    background: none;
+  }
+.pannel {
+    overflow: hidden;
+    padding: 0px 3px;
+    max-height: 0px;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    transition: max-height 0.6s ease-in-out;
+    border-radius: 0px 0px 8px 8px;
+    height: 100%;
+}
+.active .pannel {
+    padding: 0px 3px 3px 3px;
+}
+.tab {
+    border-radius: 0px 0px 8px 8px;
+    background-color: rgb(5, 6, 45);
+    overflow: hidden;
+    justify-content: space-between;
+    display: flex;
+    padding: 0px 3px;
+    font-size: 16px;
+    transition: max-height 0.6s ease-in-out;
+}
+
+.tab1 {
+    margin: 1rem;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 1.4em;
+    padding: 0px;
+    width: 50%;
+    border-radius: 8px;
+    display: inline-block;
+}
+.tab2 {
+    margin: 1rem;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 1.4em;
+    padding: 0px;
+    border-radius: 8px;
+    width: 50%;
+    display: inline-block;
+}
+.tab-head {
+    margin: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0.5rem ;
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+    background: rgb(5, 6, 45);
+}
+.tab-li {
+    margin: 2px;
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 0px 0px 8px 8px;
+    background: rgb(5, 6, 45);
+}
+.tab-li ul {
+    margin: 0;
+    padding: 0;
+}
+
+.tab-li li {
+    margin: 0.75em;
+}
+.b h3 {
+    font-size: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration-line: underline;
+}
+/*
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active{
+    max-width: 10%;
+}
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}*/
+
+.title_licence {
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+    font-size: 2.2em;
+    font-weight: 800;
+    color: rgb(140, 0, 255);
+    margin-bottom: 30px; 
+}
+
+.content {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.icon_Ser {
+    font-size: 8em;
+    color: rgb(140, 0, 255);
+    text-align: center;
+}
+
+.card {
+    justify-content: center;
+    background: white;
+    width: 21.25em;
+    border-radius: 1em;
+    margin: 15px;
+    padding: 25px;
+    box-shadow: 0px 5px 30px rgba(80, 80, 80, 0.25);
+    transition: 0.65s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: rgb(140, 0, 255);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.project {
+    width: 100%;
+    align-items: center;
+    background: url(pic/1.png) no-repeat;
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid white;
+    min-height: 14em;
+    min-width: 16em;
+    max-width: 20em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.65s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1)
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+}
+
+.project-image img{
+    width: 100%;
+    max-height: 14em;
+    max-width: 24em;
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more{
+    text-decoration: none;
+    color: rgb(140, 0, 255);
+}
+
+.more:hover {
+    color:rgb(88, 0, 159);
+}
+
+.contact .icon_Ser {
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    font-size: 1.5em;
+}
+
+.contact .info p{
+    font-size: 1.2em;
+}
+
+.footer {
+    background-color: #000;
+    color:aliceblue;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+footer .icons a{
+    font-size: 1.3em;
+    padding: 10px;
+}
+@media (max-width: 700px) {
+    .tab{
+        flex-direction: column;
     }
-    function fun() {
-        
+    .tab1, .tab2{
+        width: 95%;
+        margin: 2.5%;
+        justify-content: center;
+        align-items: center;
+    }
 }
-function toggleIcon() {
-    icon= document.getElementsById("1");
-    icon.classList.add("fa-chevron-up");
+@media (max-width: 410px) {
+    .accordion h3 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 300px) {
+    .accordion h3 {
+        font-size: 12px;
+    }
+}
+@media (max-width: 1023px) {
+    header{
+        padding: 10px 20px;
+    }
+   
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title_cards{
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 80px 10px;
+    }
+
+    .main-content h2 {
+        font-size: 1em;
+    }
+
+    .main-content h3 {
+        font-size: 1.6em;
+    }
+    
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-</script>
-</body>
-</html>
+@media (max-width:641px) {
+    body {
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+    .main-content h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px) {
+    body{
+        font-size: 10px;
+    }
+}
+@media (min-width: 768px) {
+    .button-64 {
+      font-size: 24px;
+      min-width: 196px;
+    }
+}
